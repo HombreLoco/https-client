@@ -13,9 +13,16 @@ function getAndPrintHTML () {
 
     response.setEncoding("utf8");
 
+    var buffered = "";
     response.on("data", function (data) {
-      console.log(data + "\n");
+      buffered += data;
+      console.log(buffered);
     });
+
+    response.on('end', function() {
+    });
+
+
   });
 
 }

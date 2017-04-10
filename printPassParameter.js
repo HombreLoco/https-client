@@ -10,13 +10,20 @@ var requestOptions = {
 
 function getAndPrintHTML (options) {
 
-  https.get(options, function(response) {
+  https.get(requestOptions, function(response) {
 
     response.setEncoding("utf8");
 
+    var buffered = "";
     response.on("data", function (data) {
-      console.log(data + "\n");
+      buffered += data;
+      console.log(buffered);
     });
+
+    response.on('end', function() {
+    });
+
+
   });
 
 }
