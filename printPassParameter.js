@@ -28,4 +28,4 @@ function getAndPrintHTML (options) {
 
 }
 
-getAndPrintHTML(requestOptions);
+// getAndPrintHTML(requestOptions);
